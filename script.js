@@ -365,3 +365,13 @@ var personX = new Person("Amir", 30); //instance of Person Class
 personX.greet();
 
 console.log(personX instanceof Person);
+
+// This keyword
+function fn() {
+  console.log(this); //refers to window object
+}
+
+var obj = {
+  obfn: fn,
+};
+obj.obfn();
