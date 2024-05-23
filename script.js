@@ -350,3 +350,18 @@ console.log(max1.name);
 max1.greet();
 
 console.log(Object.getPrototypeOf(max1) == obj1);
+
+// constructor function ~ Class
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function () {
+    console.log("Hello, I am " + this.name);
+  };
+}
+
+var personX = new Person("Amir", 30); //instance of Person Class
+
+personX.greet();
+
+console.log(personX instanceof Person);
