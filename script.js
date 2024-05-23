@@ -375,3 +375,23 @@ var obj = {
   obfn: fn,
 };
 obj.obfn();
+
+// important built-in method and properties
+
+var person1 = {
+  name: "Anna",
+  age: 28,
+  greet: function () {
+    console.log("Hello buddy");
+  },
+};
+
+delete person1.name;
+
+console.log(person1.name);
+
+console.log("name" in person1);
+
+for (var field in person1) {
+  console.log(field);
+}
