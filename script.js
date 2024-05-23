@@ -395,3 +395,19 @@ console.log("name" in person1);
 for (var field in person1) {
   console.log(field);
 }
+
+// functions -- closures
+function generator(input) {
+  var number = input;
+  return function () {
+    return number * 2;
+  };
+}
+
+var calc = generator(900);
+console.log(calc());
+
+// immediately invoked function executions(IIFE)
+(function calc() {
+  console.log("calc");
+})();
